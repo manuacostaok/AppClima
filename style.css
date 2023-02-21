@@ -6,6 +6,88 @@
     box-sizing: border-box;
 }
 
+.container2{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: 1s; }
+    body .container2 {
+      border-radius: 5px;
+      background-color: rgba(235, 239, 241, 0.7);
+      padding: 30px 200px 30px 200px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+      height: 500px;
+      transition: 0.5s; }
+      body .container2:hover {
+        background-color: rgba(235, 239, 241, 0.9); }
+      body .container2 #titulo {
+        font-family: Merriweather;
+        font-size: 70px;
+        text-align: center;
+        margin: 0; }
+      body .container2 #textlocation {
+        font-family: Raleway;
+        text-align: right;
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 0; }
+        body .container2 #textlocationAdvice {
+            font-family: Raleway;
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-top: 0; }
+      body .container2 hr {
+        width: 100%; }
+      body .container2 #weather {
+        text-align: center;
+        font-size: 90px; }
+        body .container2 #weather #weatherval {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          font-family: Arial;
+          padding-left: 50px; }
+          body .container2 #weather #weatherval #tempunit {
+            font-size: 50px;
+            text-decoration: none;
+            color: black;
+            padding-top: 30px;
+            -webkit-align-self: baseline;
+            -ms-flex-item-align: baseline;
+            align-self: baseline; }
+        body .container2 #weather #weathermain {
+          font-size: 40px;
+          font-family: Libre Baskerville; }
+        body .container2 #weather .nomargin {
+          margin: 0;
+          padding: 0; }
+
+
 body{
     height: 100vh;
     display: flex;

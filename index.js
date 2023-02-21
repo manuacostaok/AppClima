@@ -5,8 +5,9 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
+    
 
-    const APIKey = '728b0ee6df5687559812bd3169ad77b7';
+    const APIKey = '5738223ed89b662a5da1163d481e5065';
     const city = document.querySelector('.search-box input').value;
 
     if (city === '')
@@ -28,41 +29,41 @@ search.addEventListener('click', () => {
             error404.style.display = 'none';
             error404.classList.remove('fadeIn');
 
-            const image = document.querySelector('.weather-box img');
-            const temperature = document.querySelector('.weather-box .temperature');
-            const description = document.querySelector('.weather-box .description');
-            const humidity = document.querySelector('.weather-details .humidity span');
-            const wind = document.querySelector('.weather-details .wind span');
+            const imagen = document.querySelector('.weather-box img');
+            const temperatura = document.querySelector('.weather-box .temperature');
+            const descripcion = document.querySelector('.weather-box .description');
+            const humedad = document.querySelector('.weather-details .humidity span');
+            const viento = document.querySelector('.weather-details .wind span');
 
             switch (json.weather[0].main) {
                 case 'Clear':
-                    image.src = 'images/clear.png';
+                    imagen.src = 'img/clear.png';
                     break;
 
                 case 'Rain':
-                    image.src = 'images/rain.png';
+                    imagen.src = 'img/rain.png';
                     break;
 
                 case 'Snow':
-                    image.src = 'images/snow.png';
+                    imagen.src = 'img/snow.png';
                     break;
 
                 case 'Clouds':
-                    image.src = 'images/cloud.png';
+                    imagen.src = 'img/cloud.png';
                     break;
 
                 case 'Haze':
-                    image.src = 'images/mist.png';
+                    imagen.src = 'img/mist.png';
                     break;
 
                 default:
-                    image.src = '';
+                    imagen.src = '';
             }
 
-            temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
-            description.innerHTML = `${json.weather[0].description}`;
-            humidity.innerHTML = `${json.main.humidity}%`;
-            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            temperatura.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+            descripcion.innerHTML = `${json.weather[0].description}`;
+            humedad.innerHTML = `${json.main.humidity}%`;
+            viento.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
