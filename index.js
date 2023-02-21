@@ -28,41 +28,41 @@ search.addEventListener('click', () => {
             error404.style.display = 'none';
             error404.classList.remove('fadeIn');
 
-            const imagen = document.querySelector('.weather-box img');
-            const temperatura = document.querySelector('.weather-box .temperature');
-            const descripcion = document.querySelector('.weather-box .description');
-            const humedad = document.querySelector('.weather-details .humidity span');
-            const viento = document.querySelector('.weather-details .wind span');
+            const image = document.querySelector('.weather-box img');
+            const temperature = document.querySelector('.weather-box .temperature');
+            const description = document.querySelector('.weather-box .description');
+            const humidity = document.querySelector('.weather-details .humidity span');
+            const wind = document.querySelector('.weather-details .wind span');
 
             switch (json.weather[0].main) {
                 case 'Clear':
-                    imagenn.src = 'img/clear.png';
+                    image.src = 'images/clear.png';
                     break;
 
                 case 'Rain':
-                    imagen.src = 'img/rain.png';
+                    image.src = 'images/rain.png';
                     break;
 
                 case 'Snow':
-                    imagen.src = 'img/snow.png';
+                    image.src = 'images/snow.png';
                     break;
 
                 case 'Clouds':
-                    imagen.src = 'img/cloud.png';
+                    image.src = 'images/cloud.png';
                     break;
 
                 case 'Haze':
-                    imagen.src = 'img/mist.png';
+                    image.src = 'images/mist.png';
                     break;
 
                 default:
-                    imagen.src = '';
+                    image.src = '';
             }
 
-            temperatura.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
-            descripcion.innerHTML = `${json.weather[0].description}`;
-            humedad.innerHTML = `${json.main.humidity}%`;
-            viento.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+            description.innerHTML = `${json.weather[0].description}`;
+            humidity.innerHTML = `${json.main.humidity}%`;
+            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
