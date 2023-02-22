@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round|Raleway|Roboto|Libre+Baskerville|Fjalla+One|Merriweather:700"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    
     <title>App Clima | Manunaki Prod</title>
 </head>
 
 <body>
-    <div clas="container2">
-        <div class="container2 animated bounceIn">
-            <h1 id="titulo">Clima por ubicación</h1><br>
-            <p id="textlocationAdvice">(asegurese de permitir la ubicación)
-            <p id="textlocation">Así está el clima en <strong id="locationID">-> Cargando ubicación... </strong></p>
-            <hr/>
-            <div id="weather">
-              <h1 class="nomargin" id="weatherval">
-                <div id="val">-</div><a id="tempunit" href="#">°C</a>
-              </h1>
-              <p class="nomargin" id="weathermain"> </p>
-            </div>
-          </div>
+    <div clas="container animated bounceIn">
+  
+        <div id="app-display">
+              <h1>Local Weather App</h1>
+            
+                 <div id="location">
+                  Your Location is <span id="city">Loading...</span>, <span id="state"></span>
+                </div><!--End of Location-->
+          
+             <div id="weather">
+                    <div >
+                       <span id="wIcon"></span>
+                   </div>
+          
+                    <div>
+                     It's <span id="temp"></span> over there!
+                   </div>
+          
+                    <div >
+                   <button class="btn btn-primary" id="btnToggle">Convert C/F Temp</button>
+                    </div>
+            </div><!--End of Weather-->
+          
+              
+        </div><!--End of App Display section-->
+          
     </div>
-    <div class="container">
+    <div class="container2 animated bounceIn">
         <div class="search-box">
             <i class="fa-solid fa-location-dot"></i>
             <input type="text" placeholder="Ingresa ubicación">
@@ -43,7 +57,7 @@
         </div>
 
         <div class="weather-box">
-            <img src="">
+            <img src="img/">
             <p class="temperature"></p>
             <p class="description"></p>
         </div>
@@ -66,6 +80,7 @@
         </div>
 
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
